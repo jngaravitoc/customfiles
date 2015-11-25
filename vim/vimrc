@@ -1,0 +1,17 @@
+" Shows the number of lines
+set number
+" English spell check
+setlocal spell spelllang=en_us
+" Make tab equal to 4 spaces
+set tabstop=4
+" Set line-break at 79 char
+set lw=79
+" Show whitespace
+set list listchars=tab:»\ ,trail:·
+" Show the filename in the window titlebar
+set title
+" Display incomplete commands
+set showcmd
+"Set the width of text to 70 characters.
+set textwidth=70
+
