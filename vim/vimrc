@@ -2,6 +2,8 @@
 set number
 " English spell check
 setlocal spell spelllang=en_us
+" Change highlight color of misspelled word
+hi SpellBad ctermfg=013      ctermbg=159     cterm=bold
 " Make tab equal to 4 spaces
 set tabstop=4
 " Set line-break at 79 char
@@ -14,4 +16,3 @@ set title
 set showcmd
 "Set the width of text to 70 characters.
 set textwidth=70
-
