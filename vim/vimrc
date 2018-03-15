@@ -1,18 +1,43 @@
 " Shows the number of lines
-set number
+" set number
 " English spell check
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+
+
 setlocal spell spelllang=en_us
 " Change highlight color of misspelled word
-hi SpellBad ctermfg=013      ctermbg=159     cterm=bold
+hi SpellBad ctermfg=002    ctermbg=159     cterm=bold
 " Make tab equal to 4 spaces
 set tabstop=4
 " Set line-break at 79 char
-set lw=79
-" Show whitespace
-set list listchars=tab:»\ ,trail:·
+set lw=80
 " Show the filename in the window titlebar
 set title
 " Display incomplete commands
 set showcmd
-"Set the width of text to 70 characters.
-set textwidth=70
+"Set the width of text to 80 characters.
+set textwidth=80
+syntax on
+
+"Latex
+filetype plugin on
+let g:tex_flavor='latex'
+set sw=2
+" TIP: if you write your \label's as \label{fig:something}, then if you
+" type in \ref{fig: and press <C-n> you will automatically cycle through
+"all the figure labels. Very useful!
+set iskeyword+=:
+
+
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+   \| exe "normal! g'\"" | endif
+endif
