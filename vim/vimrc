@@ -64,6 +64,10 @@ set sw=2
 "all the figure labels. Very useful!
 set iskeyword+=:
 
+" set second status bar
+set laststatus=2
+" put the name of the file on status bar
+set statusline=%f
 
 " reopening a file
 if has("autocmd")
