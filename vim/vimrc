@@ -12,10 +12,16 @@ Plug 'itchyny/lightline.vim'
 
 " Ale linters
 Plug 'dense-analysis/ale'
+let g:ale_linters = {'python': ['flake8', 'pylint']}
+
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+"Jedi Python autocomplation
+Plug 'davidhalter/jedi-vim'
+
 
 
 "Latex
@@ -54,6 +60,10 @@ set showcmd
 "Set the width of text to 80 characters.
 set textwidth=80
 syntax on
+"Set relative numbers
+set number relativenumber
+" Mouse functionality in Alacritty
+set ttymouse=sgr
 
 "Latex
 filetype plugin on
@@ -64,9 +74,7 @@ set sw=2
 "all the figure labels. Very useful!
 set iskeyword+=:
 
-" set second status bar
 set laststatus=2
-" put the name of the file on status bar
 set statusline=%f
 
 " reopening a file
