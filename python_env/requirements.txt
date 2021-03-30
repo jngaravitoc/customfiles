@@ -91,7 +91,7 @@ PyAudio==0.2.8
 pycups==1.9.73
 pycurl==7.43.0
 pyGadgetReader==2.6
-Pygments==2.5.2
+Pygments==2.7.4
 pygobject==3.20.0
 pyhull==2015.2.1
 PyJWT==1.3.0
