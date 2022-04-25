@@ -14,7 +14,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 let g:ale_linters = {'python': ['flake8', 'pylint']}
 
-
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -24,13 +23,18 @@ Plug 'davidhalter/jedi-vim'
 
 
 
-"Latex
+" Latex
 Plug 'lervag/vimtex'
 
 " Nord theme
 Plug 'arcticicestudio/nord-vim'
 
+
+" Nerd Tree
+Plug 'preservim/nerdtree'
+
 call plug#end()
+
 " Shows the number of lines
 " set number
 
