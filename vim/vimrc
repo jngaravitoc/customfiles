@@ -36,6 +36,9 @@ call plug#end()
 
 colorscheme nord
 
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
+
 " English spell check
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -65,6 +68,12 @@ set number relativenumber
 " Mouse functionality in Alacritty
 set ttymouse=sgr
 
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
 "Latex
 filetype plugin on
 let g:tex_flavor='latex'
@@ -87,3 +96,25 @@ endif
 "set t_Co=256
 "syntax on
 ""colorscheme solarized
+
+
+
+" STATUS LINE ------------------------------------------------------------ {{{
+
+" Clear status line when vimrc is reloaded.
+set statusline=
+
+" Status line left side.
+set statusline+=\ %F\ %M\ %Y\ %R
+
+" Use a divider to separate the left side from the right side.
+set statusline+=%=
+
+" Status line right side.
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+
+" Show the status on the second to last line.
+set laststatus=2
+
+" }}}
+
