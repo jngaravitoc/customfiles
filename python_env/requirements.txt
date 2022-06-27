@@ -118,7 +118,7 @@ PyYAML==5.2
 pyzmq==18.1.1
 qtconsole==4.7.3
 QtPy==1.9.0
-reportlab==3.3.0
+reportlab==3.5.55
 requests==2.9.1
 schwimmbad==0.3.0
 scikit-learn==0.22.2.post1
